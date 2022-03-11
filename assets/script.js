@@ -9,7 +9,7 @@ var specialC = ["!", "@", "#", "$", "%", "&", "*", "()", "-", "_", "=", "+", "<"
 
 // password criteria
 function generatePassword() {
-  var passwordCriteria=[]
+  var passwordCriteria=[""]
   var inputLength = parseInt(window.prompt("Choose length of characters between 8 & 128"))
     console.log(inputLength);
 
@@ -42,7 +42,7 @@ function generatePassword() {
       var randomIndex = Math.floor(Math.random() * passwordCriteria.length);
       array=array.concat(passwordCriteria[randomIndex]); 
     }
-    var password=array.trim();
+    var password=array.join("");
     return password;
   };
     
