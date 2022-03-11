@@ -19,7 +19,7 @@ function generatePassword() {
      return generatePassword();
 
     }
-
+// Character Options
     var lowerCase = window.confirm ("Do you want lower case characters in your password?");
       if(lowerCase){
         passwordCriteria=passwordCriteria.concat(lowerC);
@@ -37,6 +37,11 @@ function generatePassword() {
         passwordCriteria=passwordCriteria.concat(specialC);
       }
     
+    var array = [""];
+    for (var i=0; i< inputLength; i++){
+      var randomIndex = Math.floor(Math.random() * passwordCriteria.length);
+      array=array.concat(passwordCriteria[randomIndex]); 
+    }
     
 
 // Get references to the #generate element
